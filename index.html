@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/output.css" />
+    <title>Sainsbureees</title>
+  </head>
+  <body
+    class="grid grid-cols-4 border shadow-2xl container max-w-full [&>*]:border [&>*]:border-red-600"
+  >
+    <header
+      class="border border-b-2 border-black col-span-4 flex flex-row items-center"
+    >
+      <div id="hambuger">
+        <img alt="ham" src="./src/icons8-hamburger-menu.svg" class="scale-50" />
+      </div>
+      <h1 class="text-orange-600 font-bold text-xl pr-2">Sainsbury's</h1>
+      <h1 class="text-orange-600 text-xl">Store Locator</h1>
+    </header>
+    <section class="grid col-span-4 container max-w-full justify-center">
+      <div class="text-orange-600 font-bold text-xl pb-6">
+        Burton on Trent Superstore
+      </div>
+      <div class="font-bold text-xl">We are open today from 07:00 to 22:00</div>
+    </section>
+    <section id="map-and-times" class="col-span-4">
+      <div id="map" class="h-40 bg-slate-600 m-4"></div>
+      <div id="times" class="bg-slate-50 m-4 p-4 text-lg">
+        <h2 class="font-bold">Store Address</h2>
+        <h3>Union Street</h3>
+        <h3>Burton-On-Trent</h3>
+        <h3>DE14 1AA</h3>
+
+        <div
+          class="flex bg-orange-500 col-span-3 p-2 m-4 text-white font-bold items-center rounded-sm justify-center"
+        >
+          Get directions and map
+        </div>
+      </div>
+      <div id="times" class="bg-slate-50 m-4 p-4 mt-0 pt-0 text-lg">
+        <h2 class="font-bold">Phone Number</h2>
+        <h3>07969 X0X0X</h3>
+        <h2 class="font-bold">Store Manager</h2>
+        <h3>Jamie Ricketts</h3>
+      </div>
+    </section>
+  </body>
+</html>
