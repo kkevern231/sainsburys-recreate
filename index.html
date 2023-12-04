@@ -4,6 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./dist/output.css" />
+    <style>
+      /* Custom styles for the hamburger menu */
+      #hamburger {
+        cursor: pointer;
+        display: none;
+      }
+
+      #menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: #ffffff;
+        border: 1px solid #ccc;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      @media (max-width: 768px) {
+        #hamburger {
+          display: block;
+        }
+
+        #menu.active {
+          display: flex;
+        }
+
+        #map-and-times {
+          padding-top: 100px; /* Adjust to prevent content overlap */
+        }
+      }
+    </style>
     <title>Sainsbureees</title>
   </head>
   <body
@@ -12,12 +45,21 @@
     <header
       class="border border-b-2 border-black col-span-4 flex flex-row items-center"
     >
-      <div id="hambuger">
+      <div id="hamburger">
         <img alt="ham" src="./src/icons8-hamburger-menu.svg" class="scale-50" />
       </div>
       <h1 class="text-orange-600 font-bold text-xl pr-2">Sainsbury's</h1>
       <h1 class="text-orange-600 text-xl">Store Locator</h1>
     </header>
+
+    <!-- Navigation Menu -->
+    <div id="menu">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+
     <section class="grid col-span-4 container max-w-full justify-center">
       <div class="text-orange-600 font-bold text-xl pb-6">
         Burton on Trent Superstore
@@ -45,5 +87,16 @@
         <h3>Jamie Ricketts</h3>
       </div>
     </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.getElementById("hamburger");
+        const menu = document.getElementById("menu");
+
+        hamburger.addEventListener("click", function () {
+          menu.classList.toggle("active");
+        });
+      });
+    </script>
   </body>
 </html>
